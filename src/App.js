@@ -28,6 +28,9 @@ function SecondSection() {
       <div className="titleContainer">
         <h3 className="subheader">Hunter's Life</h3>
         <h1 className="header">The Journal</h1>
+        <div className="button">
+          <p className="buttonTitle">Read Now</p>
+        </div>
       </div>
       <div style={{ backgroundImage: 'url(/images/hunterslife.png)' }}
            className="huntersLifeImage"/>
