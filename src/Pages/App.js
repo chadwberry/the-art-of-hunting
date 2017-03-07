@@ -1,6 +1,7 @@
 import React from 'react';
 import NavigationBar from '../Components/NavigationBar.js';
 import Button from '../Components/Button.js';
+import Footer from '../Components/Footer.js';
 import './app.styles.scss';
 
 export default class App extends React.Component {
@@ -11,6 +12,7 @@ export default class App extends React.Component {
         <FirstSection/>
         <SecondSection/>
         <ThirdSection/>
+        <Footer/>
       </div>
     );
   }
