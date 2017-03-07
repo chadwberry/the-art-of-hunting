@@ -9,6 +9,7 @@ export default class App extends React.Component {
         <NavigationBar/>
         <FirstSection/>
         <SecondSection/>
+        <ThirdSection/>
       </div>
     );
   }
@@ -34,6 +35,19 @@ function SecondSection() {
       </div>
       <div style={{ backgroundImage: 'url(/images/hunterslife.png)' }}
            className="huntersLifeImage"/>
+    </div>
+  );
+}
+
+function ThirdSection() {
+  return (
+    <div className="journalContainer">
+      <h1 className="journalTitle">Latest from the Journal</h1>
+      <div className="articleContainer">
+        <div className="articleOne"></div>
+        <div className="articleTwo"></div>
+        <div className="articleThree"></div>
+      </div>
     </div>
   );
 }
