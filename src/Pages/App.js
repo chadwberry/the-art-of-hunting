@@ -1,5 +1,6 @@
 import React from 'react';
-import NavigationBar from './NavigationBar.js';
+import NavigationBar from '../Components/NavigationBar.js';
+import Button from '../Components/Button.js';
 import './app.styles.scss';
 
 export default class App extends React.Component {
@@ -29,9 +30,7 @@ function SecondSection() {
       <div className="titleContainer">
         <h3 className="subheader">Hunter's Life</h3>
         <h1 className="header">The Journal</h1>
-        <div className="button">
-          <p className="buttonTitle">Read Now</p>
-        </div>
+        <Button title="Read Now" className="ReadNowButton"/>
       </div>
       <div style={{ backgroundImage: 'url(/images/hunterslife.png)' }}
            className="huntersLifeImage"/>
@@ -44,10 +43,20 @@ function ThirdSection() {
     <div className="journalContainer">
       <h1 className="journalTitle">Latest from the Journal</h1>
       <div className="articleContainer">
-        <div className="articleOne"></div>
-        <div className="articleTwo"></div>
-        <div className="articleThree"></div>
+        <div className="articleOne">
+          <h1 className="articleTitle">Article 1</h1>
+          <p className="articleLead">This is article One! This is great!!! This is article One! This is great!!!</p>
+        </div>
+        <div className="articleTwo">
+          <h1 className="articleTitle">Article 2</h1>
+          <p className="articleLead">This is article two! This is greater!!! This is article One! This is great!!!</p>
+        </div>
+        <div className="articleThree">
+          <h1 className="articleTitle">Article 3</h1>
+          <p className="articleLead">This is article three! This is the greatest!!! This is article One! This is great!!!</p>
+        </div>
       </div>
+      <Button title="More Articles" className="MoreArticlesButton"/>
     </div>
   );
 }

@@ -47,31 +47,6 @@
     margin: 0;
   }
 
-  .button {
-    width: 200px;
-    height: 50px;
-    background-color: white;
-    margin-top: 25px;
-    border-style: solid;
-    border-color: white;
-    border-width: 1px;
-    border-radius: 5px;
-
-    &:hover {
-      background-color: black;
-      color: white;
-      transition: all 0.4s ease;
-      cursor: pointer;
-    }
-  }
-
-  .buttonTitle {
-    font-family: 'ubuntu', sans-serif;
-    text-transform: uppercase;
-    font-size: 1em;
-    font-weight: bold;
-    text-align: center;
-  }
 }
 
 .huntersLifeImage {
@@ -104,13 +79,45 @@
   width: 100%;
   height: 250px;
   padding: 0 150px;
-  background-color: blue;
 
   .articleOne, .articleTwo, .articleThree {
     width: 33%;
     height: 250px;
-    background-color: red;
     margin: 0 10px;
   }
 
+  .articleTitle {
+    font-family: 'ubuntu', sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .articleLead {
+    font-family: 'ubuntu', sans-serif;
+    font-weight: 200;
+    text-align: center;
+    font-size: 1.25em;
+    line-height: 1.75em;
+  }
+}
+
+.ReadNowButton {
+  background-color: white;
+  border-color: white;
+
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+}
+
+.MoreArticlesButton {
+  background-color: black;
+  border-color: black;
+  color: white;
+
+  &:hover {
+    background-color: white;
+    color: black;
+  }
 }
