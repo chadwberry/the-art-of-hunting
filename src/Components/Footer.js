@@ -9,7 +9,7 @@ class Footer extends Component {
       <div className="footerContainer">
         <div style={{ backgroundImage: 'url(/images/TheArtofHuntingLogo2.png)' }}
              className="footerLogo"/>
-        <div className="followUsContainer">
+        <div>
           <h1 className="footerTitle">FOLLOW US ON:</h1>
           <div className="iconContainer">
             <a target="_blank"
@@ -17,7 +17,7 @@ class Footer extends Component {
               <Facebook className="facebook"/>
             </a>
             <a target="_blank"
-               href="https://www.youtube.com/channel/UC2Wj2nbMLHYsIt6hj-G047w">
+               href="https://www.youtube.com/channel/UCx5RCuib6wlTwJ-m3Rus4XQ">
               <YouTube className="youTube"/>
             </a>
           </div>
