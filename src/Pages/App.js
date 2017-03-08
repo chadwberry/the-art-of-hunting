@@ -65,7 +65,9 @@ function ThirdSection() {
           </p>
         </div>
       </div>
+      <Link to="/articles" className="link">
       <Button title="More Articles" className="MoreArticlesButton"/>
+      </Link>
     </div>
   );
 }

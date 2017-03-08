@@ -20,9 +20,12 @@ class ArticleList extends Component {
           <h1 className="journalTitle">The Journal</h1>
           <div className="rowContainer">
           {map(images, (image, key) =>
-            <div style={this.getBackgroundImage(image)}
-                 className="articlePhoto"
-                 key={key}/>)}
+            <div className="container" key={key}>
+              <div style={this.getBackgroundImage(image)}
+                   className="articlePhoto"/>
+                   <h1 className="title">Blind Luck</h1>
+            </div>
+            )}
           </div>
         </div>
       </div>
