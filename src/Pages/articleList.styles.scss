@@ -17,7 +17,7 @@
 
 .articleGridContainer {
   background-color: white;
-  width: 100%;
+  // width: 100%;
   padding: 50px;
 }
 
@@ -26,7 +26,7 @@
 }
 
 .articlePhoto {
-  width: 33%;
+  width: calc(33% - 30px);
   height: 400px;
   background-position: center;
   background-size: cover;
@@ -37,4 +37,6 @@
 .rowContainer {
   display: flex;
   flex-direction: row;
+  flex-basis: 33%;
+  flex-wrap: wrap;
 }

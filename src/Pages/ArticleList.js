@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
 import './articleList.styles.scss';
+import map from 'lodash/map';
 
 class ArticleList extends Component {
+
+  getBackgroundImage(image) {
+    return { backgroundImage: `url(/images/${image}.png)` };
+  }
+
   render() {
+    const images = ['blindluckpic2', 'elk1', 'elk2', 'blindluckpic2',
+                    'elk1', 'elk2', 'blindluckpic2', 'elk1', 'elk2'];
     return (
       <div>
         <div className="articleTitleContainer">
@@ -10,26 +18,16 @@ class ArticleList extends Component {
         </div>
         <div className="articleGridContainer">
           <h1 className="journalTitle">The Journal</h1>
-          <Row/>
-          <Row/>
-          <Row/>
+          <div className="rowContainer">
+          {map(images, (image, key) =>
+            <div style={this.getBackgroundImage(image)}
+                 className="articlePhoto"
+                 key={key}/>)}
+          </div>
         </div>
       </div>
     );
   }
-}
-
-function Row() {
-  return (
-    <div className="rowContainer">
-      <div style={{ backgroundImage: 'url(/images/blindluckpic2.png)' }}
-           className="articlePhoto"></div>
-      <div style={{ backgroundImage: 'url(/images/elk1.png)' }}
-           className="articlePhoto"></div>
-      <div style={{ backgroundImage: 'url(/images/elk2.png)' }}
-           className="articlePhoto"></div>
-    </div>
-  );
 }
 
 export default ArticleList;
