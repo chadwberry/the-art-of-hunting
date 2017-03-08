@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import './Button.style.scss';
+import './button.style.scss';
 
 function Button({ title, className }) {
   return (

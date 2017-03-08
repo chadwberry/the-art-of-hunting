@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Button from '../Components/Button.js';
+import { Link } from 'react-router';
 import './app.styles.scss';
 
-export default class App extends React.Component {
+class App extends Component {
   render() {
     return (
       <div className="appContainer">
@@ -28,7 +29,9 @@ function SecondSection() {
       <div className="titleContainer">
         <h3 className="subheader">Hunter's Life</h3>
         <h1 className="header">The Journal</h1>
-        <Button title="Read Now" className="ReadNowButton"/>
+        <Link to="/articles" className="link">
+          <Button title="Read Now" className="ReadNowButton"/>
+        </Link>
       </div>
       <div style={{ backgroundImage: 'url(/images/hunterslife.png)' }}
            className="huntersLifeImage"/>
@@ -66,3 +69,5 @@ function ThirdSection() {
     </div>
   );
 }
+
+export default App;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Footer.styles.scss';
+import './footer.styles.scss';
 import Facebook from 'react-icons/lib/fa/facebook-square';
 import YouTube from 'react-icons/lib/fa/youtube';
 

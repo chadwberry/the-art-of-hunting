@@ -1,15 +1,16 @@
 import React from 'react';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
-import NavigationBar from './Components/NavigationBar';
-import App from './Pages/App';
-import Article from './Pages/Article';
+import { App, ArticleList, PageTemplate } from './Pages';
+// import App from './Pages/App';
+// import Article from './Pages/Article';
+// import PageTemplate from './Pages/PageTemplate';
 
 function RouteProvider() {
   return (
     <Router history={browserHistory}>
-      <Route path="/" component={NavigationBar}>
+      <Route path="/" component={PageTemplate}>
         <IndexRoute component={App}/>
-        <Route path="article" component={Article}/>
+        <Route path="articles" component={ArticleList}/>
       </Route>
     </Router>
   );
