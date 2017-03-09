@@ -29,7 +29,7 @@ class ArticleList extends Component {
           <div className="rowContainer">
           {map(images, (image, key) =>
             <div className="container" key={key}>
-              <Link to="/article" className="articleLink">
+              <Link to="/articles/blind-luck" className="articleLink">
                 <div style={this.getBackgroundImage(image)}
                      className="articlePhoto"/>
               </Link>

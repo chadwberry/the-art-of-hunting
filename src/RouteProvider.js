@@ -9,7 +9,7 @@ function RouteProvider() {
       <Route path="/" component={PageTemplate} onChange={changeRoute}>
         <IndexRoute component={App}/>
         <Route path="articles" component={ArticleList}/>
-        <Route path="article" component={ArticleTemplate}/>
+        <Route path="articles/:articleName" component={ArticleTemplate}/>
       </Route>
     </Router>
   );
