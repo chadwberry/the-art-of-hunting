@@ -1,0 +1,32 @@
+@import '../constants';
+
+.articleTemplateContainer {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.blindLuck {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 1000px;
+}
+
+.articleHeader {
+  @include header-style;
+  font-size: 8em;
+  color: $gold;
+  position: absolute;
+  text-shadow: 2px 2px 20px black;
+}

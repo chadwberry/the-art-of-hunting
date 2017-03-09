@@ -1,6 +1,6 @@
 import React from 'react';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
-import { App, ArticleList, PageTemplate } from './Pages';
+import { App, ArticleList, PageTemplate, ArticleTemplate } from './Pages';
 import $ from 'jquery';
 
 function RouteProvider() {
@@ -9,6 +9,7 @@ function RouteProvider() {
       <Route path="/" component={PageTemplate} onChange={changeRoute}>
         <IndexRoute component={App}/>
         <Route path="articles" component={ArticleList}/>
+        <Route path="article" component={ArticleTemplate}/>
       </Route>
     </Router>
   );

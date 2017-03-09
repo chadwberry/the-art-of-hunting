@@ -46,6 +46,7 @@
   flex-direction: row;
   flex-basis: 33%;
   flex-wrap: wrap;
+  justify-content: center;
 
   .container {
     align-items: flex-end;
@@ -56,12 +57,22 @@
     background-color: black;
     margin: 15px;
 
+    .articleLink {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
     .title {
       position: absolute;
       color: $gold;
       @include subheader-style;
+      font-size: 1.5em;
       opacity: 0;
       padding-bottom: 50px;
+      width: calc(33% - 60px);
+      padding-left: 15px;
+      padding-right: 15px;
     }
 
     &:hover {

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './articleList.styles.scss';
 import map from 'lodash/map';
+import { Link } from 'react-router';
 
 class ArticleList extends Component {
 
@@ -8,9 +9,16 @@ class ArticleList extends Component {
     return { backgroundImage: `url(/images/${image}.png)` };
   }
 
+  getTitle(titles, key) {
+    return titles[key];
+  }
+
   render() {
-    const images = ['blindluckpic2', 'elk1', 'elk2', 'blindluckpic2',
-                    'elk1', 'elk2', 'blindluckpic2', 'elk1', 'elk2'];
+    const images = ['blindluckpic2', 'elk1', 'elk2', 'whitetaildeer1',
+                    'chadberryelk2010', 'elk3', 'elk4', 'blindluckpic1', 'glenberryelk2010'];
+    const titles = ['Blind Luck', 'Understanding the Stages of the Elk Rut',
+                    'Elk Calling Techniques', 'title4', 'title5', 'title6',
+                    'title7', 'title8', 'title9'];
     return (
       <div>
         <div className="articleTitleContainer">
@@ -21,11 +29,12 @@ class ArticleList extends Component {
           <div className="rowContainer">
           {map(images, (image, key) =>
             <div className="container" key={key}>
-              <div style={this.getBackgroundImage(image)}
-                   className="articlePhoto"/>
-                   <h1 className="title">Blind Luck</h1>
-            </div>
-            )}
+              <Link to="/article" className="articleLink">
+                <div style={this.getBackgroundImage(image)}
+                     className="articlePhoto"/>
+              </Link>
+              <h1 className="title">{this.getTitle(titles, key)}</h1>
+            </div>)}
           </div>
         </div>
       </div>
