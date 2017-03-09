@@ -106,7 +106,9 @@ module.exports = {
           /\.css$/,
           /\.json$/,
           /\.svg$/,
-          /\.scss$/
+          /\.scss$/,
+          /\.txt$/,
+          /\.md$/
         ],
         loader: 'url',
         query: {
@@ -153,6 +155,14 @@ module.exports = {
       {
         test: /\.scss$/,
         loader: 'style!css?importloaders=1!postcss!sass'
+      },
+      {
+        test: /\.txt$/,
+        loader: 'raw'
+      },
+      {
+        test: /\.md$/,
+        loader: 'babel!react-markdown'
       }
       // ** STOP ** Are you adding a new loader?
       // Remember to add the new extension(s) to the "url" loader exclusion list.
