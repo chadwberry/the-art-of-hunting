@@ -43,4 +43,12 @@
 
 .videoContainer {
   padding-bottom: 25px;
+
+  .authorImg {
+    width: 500px;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }

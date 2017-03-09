@@ -21,4 +21,8 @@ export default class ArticleModel extends Model {
   getVideo() {
     return this.get('video');
   }
+
+  getAuthorImg() {
+    return this.get('authorImg');
+  }
 }
