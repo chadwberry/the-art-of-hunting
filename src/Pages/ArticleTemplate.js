@@ -56,7 +56,6 @@ class Video extends Component {
       </div>
     );
   }
-
 }
 
 export default ArticleTemplate;

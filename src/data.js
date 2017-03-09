@@ -17,8 +17,7 @@ export default {
       'image': 'elk1.png',
       'text': TheElkRut,
       'video': '',
-      'authorImg': 'blindluckpic2.png'
-      // 'https://www.youtube.com/embed/M695C9OXHhI'
+      'authorImg': 'glenberryelk2016.png'
     }
   ]
 };
