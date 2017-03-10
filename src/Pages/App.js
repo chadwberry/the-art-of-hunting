@@ -16,6 +16,7 @@ class App extends Component {
         <FirstSection/>
         <SecondSection/>
         <ThirdSection/>
+        <FourthSection/>
       </div>
     );
   }
@@ -33,7 +34,7 @@ function SecondSection() {
   return (
     <div className="huntersLifeContainer">
       <div className="titleContainer">
-        <h3 className="subheader">Hunter's Life</h3>
+        <h3 className="subheader">The ART of HUNTING</h3>
         <h1 className="header">The Journal</h1>
         <Link to="/articles" className="readNowLink">
           <Button title="Read Now" className="ReadNowButton"/>
@@ -65,6 +66,15 @@ function ThirdSection() {
         </Link>
       </div>
     </div>
+  );
+}
+
+function FourthSection() {
+  return (
+  <div className="sponsorLogoContainer">
+    <div style={{ backgroundImage: 'url(/images/rnrrvlogo.png)' }}
+         className="sponsorLogo"/>
+  </div>
   );
 }
 

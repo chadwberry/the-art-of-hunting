@@ -22,6 +22,11 @@ class Footer extends Component {
             </a>
           </div>
         </div>
+        <a target="_blank"
+           href="http://www.berrygamecalls.com">
+          <div style={{ backgroundImage: 'url(/images/berrygamecallslogo.png)' }}
+               className="berryLogo"/>
+        </a>
       </div>
     );
   }

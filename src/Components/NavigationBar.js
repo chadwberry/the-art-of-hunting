@@ -4,8 +4,6 @@ import { Link } from 'react-router';
 import DropDownMenu from './DropDownMenu';
 import classnames from 'classnames';
 import './navigationBar.styles.scss';
-import './dropDownMenu.styles.scss';
-
 
 class NavigationBar extends Component {
 
@@ -28,9 +26,11 @@ class NavigationBar extends Component {
                 <h1 className="mainHeader">The ART of HUNTING</h1>
               </div>
             </Link>
-            <MdMenu className={classnames('menuIcon', this.state.showMenu && 'showDropDownMenu')}
-                    onClick={this.toggleMenu.bind(this)}/>
+            <div className={classnames('menuIconContainer', this.state.showMenu && 'showDropDownMenu')}
+                 onClick={this.toggleMenu.bind(this)}>
+            <MdMenu className="menuIcon"/>
             <DropDownMenu/>
+          </div>
           </div>
       </div>
     );
