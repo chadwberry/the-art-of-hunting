@@ -66,8 +66,8 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 515px;
   background-color: white;
+  margin: 75px 0;
 
   .journalTitle {
     font-family: 'ubuntu', sans-serif;
@@ -79,13 +79,14 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 250px;
-  padding: 0 150px;
+  padding: 0 100px;
 
-  .articleOne, .articleTwo, .articleThree {
-    width: 33%;
-    height: 250px;
-    margin: 0 10px;
+  .articlePreview {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 33%;
+    flex-wrap: wrap;
+    margin: 0 15px;
   }
 
   .articleTitle {
@@ -104,27 +105,27 @@
 }
 
 .ReadNowButton {
-  background-color: white;
-  border-color: white;
-
-  &:hover {
-    background-color: black;
-    color: white;
-  }
+  @include black-button-style;
 }
 
 .MoreArticlesButton {
-  background-color: black;
-  border-color: black;
-  color: white;
-
-  &:hover {
-    background-color: white;
-    color: black;
-  }
+  @include white-button-style;
 }
 
-.link {
+.articlePreviewLink {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  height: 100%;
+}
+
+.articleLead {
+  font-family: 'ubuntu', sans-serif;
+  font-size: 1em;
+  text-align: center;
+}
+
+.readNowLink {
   text-decoration: none;
   color: black;
 }

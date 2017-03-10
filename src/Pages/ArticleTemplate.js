@@ -3,6 +3,8 @@ import ArticleCollection from '../Models/ArticleCollection';
 import ArticleModel from '../Models/ArticleModel';
 import data from '../data';
 import './articleTemplate.styles.scss';
+import Button from '../Components/Button.js';
+import { Link } from 'react-router';
 
 const articles = new ArticleCollection(data.articles);
 
@@ -18,14 +20,18 @@ class ArticleTemplate extends Component {
           <div style={{ backgroundImage: `url(/images/${article.getImage()})` }}
                className="blindLuck"/>
         </div>
+        <h3 className="byLine">By {article.getAuthor()}</h3>
         <div className="post">{article.getText()}</div>
-        <Video article={article}/>
+        <VideoOrImage article={article}/>
+        <Link to="/articles" className="backLink">
+          <Button title="back" className="backButton"/>
+        </Link>
       </div>
     );
   }
 }
 
-class Video extends Component {
+class VideoOrImage extends Component {
 
   static propTypes = {
     article: PropTypes.instanceOf(ArticleModel)
@@ -40,7 +46,6 @@ class Video extends Component {
       this.setState({ isVideo: false });
       return;
     }
-    this.setState({ isVideo: true });
   }
 
   componentDidMount() {
@@ -48,11 +53,13 @@ class Video extends Component {
   }
 
   render() {
+    const article = this.props.article;
+    const isVideo = this.state.isVideo;
     return (
       <div className="videoContainer">
-        { this.state.isVideo ?
-          <iframe width="560" height="315" src={this.props.article.getVideo()} frameBorder="0" allowFullScreen/>
-        : <div style={{ backgroundImage: `url(/images/${this.props.article.getAuthorImg()})` }} className="authorImg"/>}
+        { isVideo ?
+          <iframe width="560" height="315" src={article.getVideo()} frameBorder="0" allowFullScreen/>
+        : <div style={{ backgroundImage: `url(/images/${article.getAuthorImg()})` }} className="authorImg"/>}
       </div>
     );
   }

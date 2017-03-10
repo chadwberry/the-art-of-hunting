@@ -25,4 +25,8 @@ export default class ArticleModel extends Model {
   getAuthorImg() {
     return this.get('authorImg');
   }
+
+  getAuthor() {
+    return this.get('author');
+  }
 }

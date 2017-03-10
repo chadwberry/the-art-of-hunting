@@ -29,6 +29,7 @@
   color: $gold;
   position: absolute;
   text-shadow: 2px 2px 20px black;
+  padding: 0 50px;
 }
 
 .post {
@@ -37,7 +38,7 @@
   font-weight: 300;
   line-height: 1.75em;
   width: 80%;
-  padding: 50px 0;
+  padding-bottom: 50px;
   white-space: pre-line;
 }
 
@@ -51,4 +52,18 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
+}
+
+.byLine {
+  font-family: 'ubuntu', sans-serif;
+  font-size: 1.5em;
+}
+
+.backButton {
+  @include white-button-style;
+  margin-bottom: 25px;
+}
+
+.backLink {
+  text-decoration: none;
 }

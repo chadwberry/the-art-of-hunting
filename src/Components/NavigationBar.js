@@ -1,10 +1,22 @@
 import React, { Component } from 'react';
 import MdMenu from 'react-icons/lib/md/menu';
 import { Link } from 'react-router';
+import DropDownMenu from './DropDownMenu';
+import classnames from 'classnames';
 import './navigationBar.styles.scss';
+import './dropDownMenu.styles.scss';
 
 
 class NavigationBar extends Component {
+
+  state = {
+    showMenu: false
+  }
+
+  toggleMenu() {
+    this.setState({ showMenu: !this.state.showMenu });
+  }
+
   render() {
     return (
       <div>
@@ -16,7 +28,9 @@ class NavigationBar extends Component {
                 <h1 className="mainHeader">The ART of HUNTING</h1>
               </div>
             </Link>
-            <MdMenu className="menuIcon"/>
+            <MdMenu className={classnames('menuIcon', this.state.showMenu && 'showDropDownMenu')}
+                    onClick={this.toggleMenu.bind(this)}/>
+            <DropDownMenu/>
           </div>
       </div>
     );

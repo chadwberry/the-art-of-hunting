@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './articleList.styles.scss';
-import map from 'lodash/map';
 import { Link } from 'react-router';
+import map from 'lodash/map';
 import data from '../data';
 import ArticleCollection from '../Models/ArticleCollection';
 

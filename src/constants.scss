@@ -13,3 +13,24 @@ $light-grey: #f0f0f0;
   font-size: 2.5em;
   text-align: center;
 }
+
+@mixin white-button-style {
+  background-color: black;
+  border-color: black;
+  color: white;
+
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+}
+
+@mixin black-button-style {
+  background-color: white;
+  border-color: white;
+
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+}
