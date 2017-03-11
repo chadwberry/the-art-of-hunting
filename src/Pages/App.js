@@ -34,7 +34,7 @@ function SecondSection() {
   return (
     <div className="huntersLifeContainer">
       <div className="titleContainer">
-        <h3 className="subheader">The ART of HUNTING</h3>
+        <h3 className="subheader">ART of HUNTING</h3>
         <h1 className="header">The Journal</h1>
         <Link to="/articles" className="readNowLink">
           <Button title="Read Now" className="ReadNowButton"/>
@@ -74,6 +74,10 @@ function FourthSection() {
   <div className="sponsorLogoContainer">
     <div style={{ backgroundImage: 'url(/images/rnrrvlogo.png)' }}
          className="sponsorLogo"/>
+    <div style={{ backgroundImage: 'url(/images/mathewslogo.png)' }}
+              className="sponsorLogo"/>
+    <div style={{ backgroundImage: 'url(/images/trophytakerlogo.png)' }}
+                        className="sponsorLogo"/>
   </div>
   );
 }

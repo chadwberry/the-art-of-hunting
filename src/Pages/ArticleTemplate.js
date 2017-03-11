@@ -5,6 +5,7 @@ import data from '../data';
 import './articleTemplate.styles.scss';
 import Button from '../Components/Button.js';
 import { Link } from 'react-router';
+import ReactDisqusThread from 'react-disqus-thread';
 
 const articles = new ArticleCollection(data.articles);
 
@@ -26,6 +27,12 @@ class ArticleTemplate extends Component {
         <Link to="/articles" className="backLink">
           <Button title="back" className="backButton"/>
         </Link>
+        <ReactDisqusThread
+                className="disqusThread"
+                shortname="artofhunting"
+                identifier={article.getPath()}
+                title={article.getTitle()}
+                url={`http://localhost:3000/articles/${article.getPath()}`}/>
       </div>
     );
   }

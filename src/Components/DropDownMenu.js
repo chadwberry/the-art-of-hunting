@@ -15,7 +15,7 @@ const pages = [
   },
   {
     name: 'Video Gallery',
-    path: '/'
+    path: '/videos'
   },
   {
     name: 'References',
