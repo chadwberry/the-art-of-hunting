@@ -1,0 +1,47 @@
+@import '../constants';
+
+.mottoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 300px;
+  background-color: $light-grey;
+  padding-top: 100px;
+
+  .motto {
+    @include header-style;
+  }
+}
+
+.videoTitleContainer {
+  height: 100px;
+  width: 100%;
+  background-color: white;
+  margin-top: 50px;
+
+  .videoGalleryTitle {
+    @include subheader-style;
+  }
+}
+
+.videoGridContainer {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 33%;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+
+  .videoOne {
+    padding: 50px;
+  }
+
+  .videoTwo {
+    padding: 50px;
+  }
+
+  .videoThree {
+    padding: 50px;
+  }
+}

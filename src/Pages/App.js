@@ -83,7 +83,7 @@ function FourthSection() {
 }
 
 function ellipsify(string) {
-  return string.slice(0, 200) + '...';
+  return string.slice(0, 100) + '...';
 }
 
 export default App;
