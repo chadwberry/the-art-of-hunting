@@ -15,6 +15,7 @@
 }
 
 .videoTitleContainer {
+  align-items: center;
   height: 100px;
   width: 100%;
   background-color: white;
@@ -34,14 +35,14 @@
   padding: 10px;
 
   .videoOne {
-    padding: 50px;
+    padding: 30px;
   }
 
   .videoTwo {
-    padding: 50px;
+    padding: 30px;
   }
 
   .videoThree {
-    padding: 50px;
+    padding: 30px;
   }
 }

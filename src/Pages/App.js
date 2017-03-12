@@ -65,6 +65,10 @@ function ThirdSection() {
           <Button title="More Articles" className="MoreArticlesButton"/>
         </Link>
       </div>
+      <div className="backgroundArtContainer">
+        <div style={{ backgroundImage: 'url(/images/elkbackgroundpicture.png)' }}
+             className="backgroundArt"/>
+      </div>
     </div>
   );
 }
@@ -83,7 +87,7 @@ function FourthSection() {
 }
 
 function ellipsify(string) {
-  return string.slice(0, 100) + '...';
+  return string.slice(0, 200) + '...';
 }
 
 export default App;
