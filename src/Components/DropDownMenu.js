@@ -18,7 +18,7 @@ const pages = [
     path: '/videos'
   },
   {
-    name: 'References',
+    name: 'Resources',
     path: '/'
   }
 ];

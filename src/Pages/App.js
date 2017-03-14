@@ -39,6 +39,9 @@ function SecondSection() {
         <Link to="/articles" className="readNowLink">
           <Button title="Read Now" className="ReadNowButton"/>
         </Link>
+        <Link to="/videos" className="readNowLink">
+          <Button title="Video Gallery" className="videoGalleryButton"/>
+        </Link>
       </div>
       <div style={{ backgroundImage: 'url(/images/hunterslife.png)' }}
            className="huntersLifeImage"/>

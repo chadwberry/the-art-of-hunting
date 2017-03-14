@@ -159,10 +159,6 @@ module.exports = {
       {
         test: /\.txt$/,
         loader: 'raw'
-      },
-      {
-        test: /\.md$/,
-        loader: 'babel!react-markdown'
       }
       // ** STOP ** Are you adding a new loader?
       // Remember to add the new extension(s) to the "url" loader exclusion list.

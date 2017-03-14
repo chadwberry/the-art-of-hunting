@@ -18,18 +18,24 @@ class ArticleList extends Component {
           <h1 className="journalTitle">The Journal</h1>
           <div className="rowContainer">
           {map(articles.toArray(), (article, key) =>
-            <div className="container" key={key}>
-              <Link to={`/articles/${article.getPath()}`} className="articleLink">
-                <div style={{ backgroundImage: `url(/images/${article.getImage()})` }}
-                     className="articlePhoto"/>
-              </Link>
-              <h1 className="title">{article.getTitle()}</h1>
-            </div>)}
+            <ArticlePreview article={article} key={key}/>)}
           </div>
         </div>
       </div>
     );
   }
+}
+
+function ArticlePreview({ article, key }) {
+  return (
+    <div className="container" key={key}>
+      <Link to={`/articles/${article.getPath()}`} className="articleLink">
+        <div style={{ backgroundImage: `url(/images/${article.getImage()})` }}
+             className="articlePhoto"/>
+      </Link>
+      <h1 className="title">{article.getTitle()}</h1>
+    </div>
+  );
 }
 
 export default ArticleList;
